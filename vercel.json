@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build --workspace @direct-v4-launchpad/sdk && npm run build --workspace @direct-v4-launchpad/web",
+  "outputDirectory": "web/dist",
+  "rewrites": [
+    { "source": "/((?!assets/|pakt-mark.svg|open-market-hero.png|open-market-hero.webp).*)", "destination": "/index.html" }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@direct-v4-launchpad/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for the developer-facing Direct V4 Launchpad protocol",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "check:example": "tsc -p tsconfig.examples.json",
+    "test": "vitest run",
+    "verify": "npm run check && npm run check:example && npm test && npm run build"
+  },
+  "keywords": [
+    "robinhood-chain",
+    "uniswap-v4",
+    "launchpad",
+    "sdk"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "viem": ">=2.37.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2",
+    "viem": "^2.37.3",
+    "vitest": "^3.2.4"
+  }
+}

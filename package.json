@@ -1,0 +1,23 @@
+{
+  "name": "pakt-public",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "sdk",
+    "web"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @direct-v4-launchpad/sdk && npm run build --workspace @direct-v4-launchpad/web",
+    "test": "npm run test --workspace @direct-v4-launchpad/sdk && npm run test --workspace @direct-v4-launchpad/web",
+    "verify": "npm run verify --workspace @direct-v4-launchpad/sdk && npm run verify --workspace @direct-v4-launchpad/web"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "qr": "0.5.5"
+  },
+  "overrides": {
+    "qr": "0.5.5"
+  }
+}
